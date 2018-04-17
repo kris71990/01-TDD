@@ -1,6 +1,7 @@
 ## Lab 1 - Test Driven Development
 
-***AuthorKris Sakarias
+### Author
+Kris Sakarias
 
 ### Version
 1.0.0
