@@ -1,5 +1,8 @@
 'use strict';
 
+const greet = require('../lib/greet');
+const arithmetic = require('../lib/arithmetic');
+
 describe('greet.js', () => {
   test('Should return null', () => {
     expect(greet()).toBeNull();
@@ -12,18 +15,24 @@ describe('greet.js', () => {
 describe('arithmetic.js', () => {
   describe('arithmetic.add', () => {
     test('valid arguments', () => {
-      expect(arithmetic.add).not.toBeUndefined();
+      expect(arithmetic.add(1, 3)).toEqual(4);
+      expect(arithmetic.add(-5, 6)).toEqual(1);
+      expect(arithmetic.add(0, 0)).toEqual(0);
     });
     test('non-number argument', () => {
-      expect(arithmetic.add).toBeUndefined();
+      expect(arithmetic.add()).toBeUndefined();
     });
   });
   describe('arithmetic.sub', () => {
     test('valid arguments', () => {
-      expect(arithmetic.add).not.toBeUndefined();
+      expect(arithmetic.sub(13, 4)).toEqual(9);
+      expect(arithmetic.sub(-1, 3)).toEqual(-4);
+      expect(arithmetic.sub(0, -4)).toEqual(4);
+      expect(arithmetic.sub(-5, -6)).toEqual(1);
+      expect(arithmetic.sub(0, 0)).toEqual(0);
     });
     test('non-number argument', () => {
-      expect(arithmetic.sub).not.toBeUndefined();
+      expect(arithmetic.sub()).toBeUndefined();
     });
   });
 });

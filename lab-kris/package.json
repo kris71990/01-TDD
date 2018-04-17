@@ -9,7 +9,7 @@
   },
   "scripts": {
     "lint": "eslint .",
-    "test": "elsint . && jest --coverage"
+    "test": "eslint . && jest --coverage"
   },
   "keywords": [],
   "author": "",
